@@ -51,7 +51,7 @@ render(){
         <div className="Table">
             <div className="Header">
                 <span>Date:{startDate} at {startTime} - {endDate} at {endTime} ({hours} Hrs {minutes} Minutes)</span>
-                <span>Total KM-{totalKm} KM <span className="Expense"> Total Expense:{totalExp}</span></span>
+                <span>Total KM - {totalKm} KM <span className="Expense"> Total Expense : {totalExp}</span></span>
                 <span className="Icon">-</span>
             </div>
             <div className="InnerTable">

@@ -75,7 +75,7 @@ class Login extends Component {
                     <div className="Details">
                     <UpperHeader data={data} values={values}/>
                     </div>
-                    <div className="OthExp">Other Expenses:{data.otherExpenses}</div>
+                    <div className="OthExp">Other Expenses : Rs {data.otherExpenses}</div>
                 </div>}
                 {tables}
             </div>
