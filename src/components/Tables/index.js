@@ -49,30 +49,30 @@ render(){
 
     return(
         <div className="Table">
-        <div className="Header">
-            <span>Date:{startDate} at {startTime} - {endDate} at {endTime} ({hours} Hrs {minutes} Minutes)</span>
-            <span>Total KM-{totalKm} KM <span className="Expense"> Total Expense:{totalExp}</span></span>
-            <span style={{"fontSize": "20px"}}>-</span>
-        </div>
-        <div className="InnerTable">
-        <table>
-            <thead>
-                <tr>
-                    <th>Trip starts(Node) to Trip ends(Node)</th>
-                    <th>Driver Name</th>
-                    <th>Trip Expense</th>
-                    <th>Trip Km</th>
-                    <th>Trip GPS Km</th>
-                    <th>Trip Time</th>
-                    <th>Odometer Reading</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                {arr}
-            </tbody>
-        </table>
-        </div>
+            <div className="Header">
+                <span>Date:{startDate} at {startTime} - {endDate} at {endTime} ({hours} Hrs {minutes} Minutes)</span>
+                <span>Total KM-{totalKm} KM <span className="Expense"> Total Expense:{totalExp}</span></span>
+                <span className="Icon">-</span>
+            </div>
+            <div className="InnerTable">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Trip starts(Node) to Trip ends(Node)</th>
+                        <th>Driver Name</th>
+                        <th>Trip Expense</th>
+                        <th>Trip Km</th>
+                        <th>Trip GPS Km</th>
+                        <th>Trip Time</th>
+                        <th>Odometer Reading</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {arr}
+                </tbody>
+            </table>
+            </div>
         </div>
     )
 }

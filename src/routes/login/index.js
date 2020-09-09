@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import Modal from "react-bootstrap/lib/Modal";
 import axios from 'axios';
 import api from '../../api'
 import Table from '../../components/Tables'
 import UpperHeader from '../../components/UpperHeader'
 import {NavLink} from 'react-router-dom';
+import './styles.css'
 
 class Login extends Component {
     constructor(props) {
@@ -62,18 +62,20 @@ class Login extends Component {
             tables.push(<Table data={item}/>)
         })
         return (
-            <div className="Main" style={{"backgroundColor": "lightgrey","padding":"2em"}}>
-            <div style={{"fontSize":"2em"}}>{this.path}</div>
-            <div>
-            <NavLink to="/" onClick={()=>this.LinkClicked("Dashboard")}>Dashboard</NavLink>
-            /
-            <NavLink to="/" onClick={()=>this.LinkClicked("Trip Summary")}>Trip Summary</NavLink>
-            </div>
-                {tripDetails && <div className="UpperDiv" style={{"display": "flex","padding":"10px 0","justifyContent": "space-between"}}>
-                    <div style={{"display": "flex","flexWrap":"wrap","width":"60%"}}>
+            <div className="Main">
+                <div className="CurrentPath" >{this.path}</div>
+                <div className="Links">
+                    <span>
+                        <NavLink to="/" onClick={()=>this.LinkClicked("Dashboard")}>Dashboard</NavLink>
+                        /
+                        <NavLink to="/" onClick={()=>this.LinkClicked("Trip Summary")}>Trip Summary</NavLink>
+                    </span>
+                </div>
+                {tripDetails && <div className="UpperDiv">
+                    <div className="Details">
                     <UpperHeader data={data} values={values}/>
                     </div>
-                    <div style={{"backgroundColor": "black","color":"white","width":"20%","marginTop":"10px","padding": "25px 5px"}}>Other Expenses:{data.otherExpenses}</div>
+                    <div className="OthExp">Other Expenses:{data.otherExpenses}</div>
                 </div>}
                 {tables}
             </div>

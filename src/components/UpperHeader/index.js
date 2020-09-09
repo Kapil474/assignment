@@ -13,13 +13,15 @@ export default class UpperHeader extends Component {
         Object.keys(values).map((item)=>{
             let value=data[item]
             if(item=="totalTripTime" || item=="totalTime"){
-                    let hours = Math.floor((data[item] / (1000 * 60 * 60)) % 24)  
-                    let minutes = Math.floor((data[item] / (1000 * 60)) % 60)
-                    value=hours + " Hrs " + minutes+" Min"
-                }
-            details.push(<div className="Div" style={{"backgroundColor": `${values[item].background}`}}>
-                { values[item].text}  {value}
-                </div>)
+                let hours = Math.floor((data[item] / (1000 * 60 * 60)) % 24)  
+                let minutes = Math.floor((data[item] / (1000 * 60)) % 60)
+                value=hours + " Hrs " + minutes+" Min"
+            }
+            details.push(
+                <div className="Div" style={{"backgroundColor": `${values[item].background}`}}>
+                    { values[item].text}  {value}
+                </div>
+            )
         })
         return details
     }
