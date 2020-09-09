@@ -1,0 +1,46 @@
+tr,th,td{
+    border:1px solid black;
+    text-align:center;
+}
+th{
+    background-color: cornflowerblue;
+    color:white;
+}
+td{
+    background-color: aliceblue;
+}
+th,td{
+    padding:4px;
+}
+button{
+    margin-left:3px;
+    margin-right:3px;
+}
+table{
+    /* margin-left:20px; */
+    width:100%;
+    margin-right:20px;
+}
+.Table{
+    /* margin-left:5%;
+    margin-right:5%; */
+    margin-bottom:20px;
+}
+
+.Header{
+    border:1px solid black;
+    display: flex;
+    justify-content: space-between;
+    padding:10px;
+    background-color:blue;
+    color:white;
+}
+
+.InnerTable{
+    width:100%;
+    padding:20px;
+    background-color:white;
+}
+.Expense{
+    color:yellow;
+}
